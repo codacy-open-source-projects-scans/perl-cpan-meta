@@ -3,12 +3,12 @@
 # that change semantics are not acceptable without prior approval
 # by David Golden or Ricardo Signes.
 
-use 5.006;
+use 5.008001;
 use strict;
 use warnings;
 package CPAN::Meta::Spec;
 
-our $VERSION = '2.150011';
+our $VERSION = '2.150012';
 
 1;
 

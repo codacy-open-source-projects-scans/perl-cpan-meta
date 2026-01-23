@@ -1,9 +1,9 @@
-use 5.006;
+use 5.008001;
 use strict;
 use warnings;
 package CPAN::Meta;
 
-our $VERSION = '2.150011';
+our $VERSION = '2.150012';
 
 =head1 SYNOPSIS
 
@@ -398,7 +398,6 @@ sub save {
   my ($self, $file, $options) = @_;
 
   my $version = $options->{version} || '2';
-  my $layer = $] ge '5.008001' ? ':utf8' : '';
 
   if ( $version ge '2' ) {
     carp "'$file' should end in '.json'"
@@ -410,7 +409,7 @@ sub save {
   }
 
   my $data = $self->as_string( $options );
-  open my $fh, ">$layer", $file
+  open my $fh, '>:encoding(UTF-8)', $file
     or die "Error opening '$file' for writing: $!\n";
 
   print {$fh} $data;
