@@ -7,7 +7,7 @@ use ExtUtils::MakeMaker 6.17;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "the distribution metadata for a CPAN dist",
-  "AUTHOR" => "David Golden <dagolden\@cpan.org>, Ricardo Signes <rjbs\@cpan.org>, Adam Kennedy <adamk\@cpan.org>",
+  "AUTHOR" => "David Golden <dagolden\@cpan.org>, Ricardo Signes <cpan\@semiotic.systems>, Adam Kennedy <adamk\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.17"
   },
@@ -44,7 +44,7 @@ my %WriteMakefileArgs = (
     "utf8" => 0,
     "vars" => 0
   },
-  "VERSION" => "2.150012",
+  "VERSION" => "2.150013",
   "test" => {
     "TESTS" => "t/*.t t/parse-cpan-meta/*.t"
   }
